@@ -22,7 +22,12 @@ public class MakeStars {
 
       Scanner data1 = new Scanner(input.nextLine());
       while (data1.hasNext()) {
-        System.out.print(data1.next() + ' ');
+        String k = data1.next();
+
+        for (int i = 0; i < k.length(); i ++) {
+          System.out.print('*');
+        }
+        System.out.print(' ');
       }
 
       System.out.println("");
