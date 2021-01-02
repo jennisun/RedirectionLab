@@ -6,8 +6,6 @@ public class MakeStars {
     // creates a Scanner object
     Scanner input = new Scanner(System.in);
 
-    String output = "";
-
     // reads an int value
     while (input.hasNextLine()) {
       // Scanner data1 = new Scanner(input.nextLine());
@@ -24,9 +22,14 @@ public class MakeStars {
       while (data1.hasNext()) {
         String k = data1.next();
 
-        for (int i = 0; i < k.length(); i ++) {
-          System.out.print('*');
+        if (k.charAt(0) == 'a' || k.charAt(0) == 'e' || k.charAt(0) == 'i' || k.charAt(0) == 'o' || k.charAt(0) == 'u') {
+          System.out.print(k + "hay");
         }
+        else System.out.print(k.substring(1, k.length()) + String.valueOf(k.charAt(0)) + "ay");
+
+        // for (int i = 0; i < k.length(); i ++) {
+        //   System.out.print('*');
+        // }
         System.out.print(' ');
       }
 
