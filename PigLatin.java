@@ -3,7 +3,8 @@ import java.util.ArrayList;
 
 public class PigLatin {
 
-  public static String pigLatinSimple(String k){
+  public static String pigLatinSimple(String s){
+    String k = s.toLowerCase();
     if (k.charAt(0) == 'a' || k.charAt(0) == 'e' || k.charAt(0) == 'i' || k.charAt(0) == 'o' || k.charAt(0) == 'u') {
       return(k + "hay");
     }
@@ -11,7 +12,8 @@ public class PigLatin {
   }
 
 
-  public static String pigLatin(String k){
+  public static String pigLatin(String s){
+    String k = s.toLowerCase();
     ArrayList<String> a = new ArrayList<String>();
     String[] b = new String[] {"bl", "br", "ch", "ck", "cl", "cr", "dr", "fl", "fr", "gh", "gl", "gr", "ng", "ph", "pl", "pr", "qu", "sc", "sh", "sk", "sl", "sm", "sn", "sp", "st", "sw", "th", "tr", "tw", "wh", "wr"};
     for (int i = 0; i < b.length; i ++) {
@@ -28,7 +30,8 @@ public class PigLatin {
   }
 
 
-  public static String pigLatinBest(String k){
+  public static String pigLatinBest(String s){
+    String k = s.toLowerCase();
     if (!(97 <= (int)k.charAt(0) && (int)k.charAt(0) <= 122)) return(k);
     else if (!(97 <= (int)k.charAt(k.length() - 1) && (int)k.charAt(k.length() - 1) <= 122)) return(pigLatin(k.substring(0, k.length() - 1)) + String.valueOf(k.charAt(k.length() - 1)));
     else return(pigLatin(k));
