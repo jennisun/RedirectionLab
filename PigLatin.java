@@ -50,7 +50,7 @@ public class PigLatin {
 
       System.out.print(pigLatinBest(k.toLowerCase()) + ' ');
     }
-    System.out.println("");
+    System.out.print("\n");
   }
 
   input.close();
