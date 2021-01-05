@@ -40,17 +40,23 @@ public class PigLatin {
 
   public static void main(String[] args) {
     // creates a Scanner object
-  Scanner input = new Scanner(System.in);
+    Scanner input = new Scanner(System.in);
 
-  while (input.hasNextLine()) {
+    while (input.hasNextLine()) {
+      boolean first = true;
+      Scanner data1 = new Scanner(input.nextLine());
 
-    Scanner data1 = new Scanner(input.nextLine());
-    while (data1.hasNext()) {
-      String k = data1.next();
+      while (data1.hasNext()) {
+        String k = data1.next();
 
-      System.out.print(pigLatinBest(k.toLowerCase()) + ' ');
-    }
-    System.out.print("\n");
+        if (first) {
+          System.out.print(pigLatinBest(k.toLowerCase()));
+          first = false;
+        }
+
+        else System.out.print(' ' + pigLatinBest(k.toLowerCase()));
+      }
+      System.out.print("\n");
   }
 
   input.close();
